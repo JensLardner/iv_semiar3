@@ -1,0 +1,31 @@
+HELP
+
+INSTANCE_ID CS101 P1 2025
+
+COST CS101 P1
+
+ADD_STUDENTS CS101-2025-P1 100
+
+COST CS101 P1
+
+PERSON Alice Johnson
+
+ALLOCATE E001 CS101-2025-P1 Tutorial 20
+
+DEALLOCATE E001 CS101-2025-P1 Lecture
+
+PERSON Bob Smith
+
+ADD_ACTIVITY E002 CS201-2025-P2 Exercise 35 1.5
+
+LIST_ACTIVITY Exercise
+
+// Try to exceed limit for different course allocations in a period
+
+PERSON Carol Andersson
+
+ALLOCATE E003 CS401-2025-P1 Seminar 15
+
+ALLOCATE E003 CS102-2025-P1 Lecture 12
+
+QUIT

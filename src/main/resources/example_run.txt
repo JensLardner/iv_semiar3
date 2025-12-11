@@ -1,0 +1,38 @@
+> HELP
+help
+quit
+instance_id
+cost
+add_students
+allocate
+deallocate
+add_activity
+list_activity
+person
+> INSTANCE_ID CS101 P1 2025
+CS101-2025-P1
+> COST CS101 P1
+Course Code: CS101, Instance Id: CS101-2025-P1, Study Period: P1, Planned Cost (in KSEK): 40.33, Actual Cost (in KSEK): 37.33
+> ADD_STUDENTS CS101-2025-P1 100
+> COST CS101 P1
+Course Code: CS101, Instance Id: CS101-2025-P1, Study Period: P1, Planned Cost (in KSEK): 58.83, Actual Cost (in KSEK): 55.83
+> PERSON Alice Johnson
+Employment Id: E001, First Name: Alice, Last Name: Johnson, Personal Number: 199001019999
+> ALLOCATE E001 CS101-2025-P1 Tutorial 20
+> DEALLOCATE E001 CS101-2025-P1 Lecture
+> PERSON Bob Smith
+Employment Id: E002, First Name: Bob, Last Name: Smith, Personal Number: 198506209888
+> ADD_ACTIVITY E002 CS201-2025-P2 Exercise 35 1.5
+> LIST_ACTIVITY Exercise
+Course Code: CS201, Course Name: Algorithms, Instance ID: CS201-2025-P2, Teacher: Bob Smith, Activity: Exercise, Planned Hours: 35, Factor: 1.5
+> PERSON Carol Andersson
+Employment Id: E003, First Name: Carol, Last Name: Andersson, Personal Number: 197712159777
+> ALLOCATE E003 CS401-2025-P1 Seminar 15
+>
+ALLOCATE E003 CS102-2025-P1 Lecture 12
+> Operation failed
+Maximum number of teacher allocations exceeded: 4
+> se.kth.iv1351.handledb.model.CourseException: Maximum number of teacher allocations exceeded: 4
+	at se.kth.iv1351.handledb.controller.Controller.updateTeachingLoad(Controller.java:91)
+	at se.kth.iv1351.handledb.view.BlockingInterpreter.handleCommands(BlockingInterpreter.java:57)
+	at se.kth.iv1351.handledb.startup.Main.main(Main.java:10)
